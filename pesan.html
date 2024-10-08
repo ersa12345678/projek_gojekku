@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Website</title>
+    <style>
+        /* CSS internal disesuaikan dengan gaya sebelumnya */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #e8491d;
+        }
+
+        /* Stil untuk iframe */
+        #map-container {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px; /* Sesuaikan tinggi sesuai kebutuhan */
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SELAMAT DATANG DI GO-JEKKU</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tentang_kami.html">Tentang Kami</a>
+                <a href="tarif.html">Tarif</a>
+                <a href="driver.html">Driver</a>
+                
+                <!-- Tautan untuk menampilkan Google Maps -->
+                <a href="#" id="show-maps">Pesan Sekarang</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <!-- Container untuk menampilkan Google Maps -->
+        <div id="map-container" style="display: none;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.1767295895796!2d112.74591661402319!3d-7.257471994749102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fcfb9a4e9de9%3A0x28000008b1f7f70!2sMalang%20City%20Point!5e0!3m2!1sen!2sid!4v1623905450731!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 GO-JEKKU. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Ambil tombol "Pesan Sekarang" berdasarkan id
+        var showMapsButton = document.getElementById('show-maps');
+
+        // Tambahkan event listener untuk menampilkan Google Maps saat tombol diklik
+        showMapsButton.addEventListener('click', function(event) {
+            var mapContainer = document.getElementById('map-container');
+            mapContainer.style.display = 'block'; // Tampilkan container untuk Google Maps
+            event.preventDefault(); // Menghentikan default action dari link
+        });
+    </script>
+</body>
+</html>

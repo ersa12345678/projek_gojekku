@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - GO-JEKKU</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: url('hijau.jpg') no-repeat center center/cover;
+            color: #333;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        header nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #e8491d;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom right;
+        }
+
+        header nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* About Section */
+        #about {
+            background: #b9f3b9;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #35424a;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        #about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: justify;
+            padding: 0 20px;
+        }
+
+        #about img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        #about img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tentang Kami - GO-JEKKU</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tentang_kami.html">Tentang Kami</a>
+                <a href="tarif.html">Tarif</a>
+                <a href="driver.html">Driver</a>
+                <a href="pembayaran.html">Pembayaran</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="about">
+            <h2>Tentang GO-JEKKU</h2>
+            <p>
+                GO-JEKKU adalah layanan ojek online yang bertujuan untuk memberikan kemudahan, keamanan, dan kenyamanan dalam perjalanan Anda. Kami berkomitmen untuk menghadirkan layanan terbaik dengan driver yang profesional dan berpengalaman. Setiap perjalanan dengan GO-JEKKU dijamin dengan protokol keamanan yang ketat.
+            </p>
+            <p>
+                Visi kami adalah menjadi penyedia layanan transportasi terbaik di Indonesia dengan mengutamakan kepuasan pelanggan. Kami terus berinovasi dan berkembang untuk memberikan pelayanan yang lebih baik setiap harinya.
+            </p>
+            <img src="antar.jpeg" alt="Tentang Kami">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 GO-JEKKU. All rights reserved.</p>
+    </footer>
+</body>
+</html>

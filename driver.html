@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver - GO-JEKKU</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: url('hijau.jpg') no-repeat center center/cover;
+            color: #333;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        header nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #e8491d;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom right;
+        }
+
+        header nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Driver Section */
+        #driver {
+            background: #b9f3b9;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #driver h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #35424a;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .driver-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .driver-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .driver-item:hover::before {
+            opacity: 1;
+        }
+
+        .driver-item img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .driver-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .driver-item h3 {
+            font-size: 1.8em;
+            color: #e8491d;
+            margin-bottom: 10px;
+            z-index: 1;
+        }
+
+        .driver-item p {
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .driver-item img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .driver-item h3 {
+                font-size: 1.5em;
+            }
+
+            .driver-item p {
+                font-size: 1em;
+            }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Driver - GO-JEKKU</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="tentang_kami.html">Tentang Kami</a>
+                <a href="tarif.html">Tarif</a>
+                <a href="driver.html">Driver</a>
+                <a href="pembayaran.html">Pembayaran</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="driver">
+            <h2>Driver Kami</h2>
+            <div class="driver-item">
+                <img src="driver1.jpg" alt="Driver 1">
+                <h3>Aristya Nur Rahman</h3>
+                <p>
+                    Aristya Nur Rahman memiliki pengalaman bertahun-tahun dalam mengemudi dan selalu mengutamakan keselamatan penumpang. Dia dikenal ramah dan profesional.
+                </p>
+            </div>
+            <div class="driver-item">
+                <img src="driver2.jpg" alt="Driver 2">
+                <h3>Nawafilliah</h3>
+                <p>
+                    Nawafilliah adalah salah satu driver terbaik kami, selalu tepat waktu dan sangat akrab dengan area sekitar. Kepuasan pelanggan adalah prioritas utamanya.
+                </p>
+            </div>
+            <div class="driver-item">
+                <img src="driver3.jpg" alt="Driver 3">
+                <h3>Syahrul Fawaid</h3>
+                <p>
+                    Syahrul Fawaid memiliki pengetahuan luas tentang rute terbaik dan selalu memastikan perjalanan Anda nyaman dan cepat. Dia sangat disukai oleh pelanggan.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 GO-JEKKU. All rights reserved.</p>
+    </footer>
+</body>
+</html>
